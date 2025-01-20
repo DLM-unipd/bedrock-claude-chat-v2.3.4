@@ -83,6 +83,18 @@ const useModel = (botId?: string | null, activeModels?: ActiveModels) => {
           description: t('model.claude-v3-sonnet.description'),
           supportMediaType: CLAUDE_SUPPORTED_MEDIA_TYPES,
         },
+        {
+          modelId: 'claude-v3.5-sonnet',
+          label: t('model.claude-v3.5-sonnet.label'),
+          description: t('model.claude-v3.5-sonnet.description'),
+          supportMediaType: CLAUDE_SUPPORTED_MEDIA_TYPES,
+        },
+        {
+          modelId: 'claude-v3.5-sonnet-v2',
+          label: t('model.claude-v3.5-sonnet-v2.label'),
+          description: t('model.claude-v3.5-sonnet-v2.description'),
+          supportMediaType: CLAUDE_SUPPORTED_MEDIA_TYPES,
+        },
         /* Modelli da non utilizzare
         {
           modelId: 'claude-v3.5-sonnet',
