@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import useSWR from 'swr';
 
 const GROUP_PUBLISH_ALLOWED = 'PublishAllowed';
-const GROUP_CREATING_BOT_ALLOWED = 'CreatingBotAllowed';
+//const GROUP_CREATING_BOT_ALLOWED = 'CreatingBotAllowed';
 const GROUP_ADMIN = 'Admin';
 
 const useUser = () => {
@@ -23,7 +23,8 @@ const useUser = () => {
         group === GROUP_PUBLISH_ALLOWED || group === GROUP_ADMIN
       ));
       setIsAllowCreatingBot(groups.some(group =>
-        group === GROUP_CREATING_BOT_ALLOWED || group === GROUP_ADMIN
+        group === GROUP_ADMIN
+        // group === GROUP_CREATING_BOT_ALLOWED || group === GROUP_ADMIN
       ));
       setIsAdmin(groups.some(group =>
         group === GROUP_ADMIN

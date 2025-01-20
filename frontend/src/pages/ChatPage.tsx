@@ -23,7 +23,7 @@ import {
 } from 'react-icons/pi';
 import Button from '../components/Button';
 import { useTranslation } from 'react-i18next';
-import SwitchBedrockModel from '../components/SwitchBedrockModel';
+//import SwitchBedrockModel from '../components/SwitchBedrockModel';
 import useSnackbar from '../hooks/useSnackbar';
 import useBot from '../hooks/useBot';
 import useConversation from '../hooks/useConversation';
@@ -504,14 +504,19 @@ const ChatPage: React.FC = () => {
               className=" flex h-full flex-col overflow-auto pb-16">
               {messages?.length === 0 ? (
                 <div className="relative flex w-full justify-center">
-                  {!loadingConversation && (
+                  {/*(!loadingConversation && (
                     <SwitchBedrockModel
                       className="mt-3 w-min"
                       activeModels={activeModels}
                       botId={botId}
                     />
-                  )}
-                </div>
+                                    )}*/
+                  }
+                  {
+                  // div legata al 'titolo'/nome app che diamo alla chat  
+                  }
+                  <div className="absolute mx-3 my-1 flex items-center justify-center text-4xl font-bold text-gray">
+
               ) : (
                 <>
                   {messages?.map((message, idx, array) => (

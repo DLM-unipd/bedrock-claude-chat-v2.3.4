@@ -268,13 +268,14 @@ const ChatListDrawer: React.FC<Props> = (props) => {
             opened ? 'visible w-64' : 'invisible w-0'
           } text-sm  text-white transition-width`}>
           <div className="absolute top-0 w-full overflow-y-auto overflow-x-hidden pb-12">
-            <DrawerItem
+          {/*<DrawerItem
               isActive={false}
               icon={<PiNotePencil />}
               to="/"
               onClick={onClickNewChat}
               labelComponent={t('button.newChat')}
-            />
+            />*/}
+            {props.isAdmin && (
             <DrawerItem
               isActive={false}
               icon={<PiCompass />}
@@ -282,6 +283,7 @@ const ChatListDrawer: React.FC<Props> = (props) => {
               labelComponent={getPageLabel('/bot/explore')}
               onClick={closeSamllDrawer}
             />
+          )}
             {props.isAdmin && (
               <ExpandableDrawerGroup
                 label={t('app.adminConsoles')}
@@ -303,7 +305,7 @@ const ChatListDrawer: React.FC<Props> = (props) => {
               </ExpandableDrawerGroup>
             )}
 
-            <ExpandableDrawerGroup
+            {/* <ExpandableDrawerGroup
               label={t('app.starredBots')}
               className="border-t pt-1">
               {starredBots?.map((bot) => (
@@ -316,7 +318,7 @@ const ChatListDrawer: React.FC<Props> = (props) => {
                   onClick={onClickNewBotChat}
                 />
               ))}
-            </ExpandableDrawerGroup>
+            </ExpandableDrawerGroup>*/}
 
             <ExpandableDrawerGroup
               label={t('app.recentlyUsedBots')}

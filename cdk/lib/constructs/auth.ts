@@ -180,11 +180,12 @@ export class Auth extends Construct {
       userPoolId: userPool.userPoolId,
     });
 
-    const creatingBotAllowedGroup = new CfnUserPoolGroup(
+    const ChatOnlyGroup = new CfnUserPoolGroup(
       this,
-      "CreatingBotAllowedGroup",
+      "ChatOnlyGroup",
       {
-        groupName: "CreatingBotAllowed",
+        groupName: "ChatOnlyGroup",
+        //groupName: "CreatingBotAllowed",
         userPoolId: userPool.userPoolId,
       }
     );
