@@ -77,6 +77,25 @@ const useModel = (botId?: string | null, activeModels?: ActiveModels) => {
   >(() => {
     return !MISTRAL_ENABLED
       ? [
+        {
+          modelId: 'claude-v3-sonnet',
+          label: t('model.claude-v3-sonnet.label'),
+          description: t('model.claude-v3-sonnet.description'),
+          supportMediaType: CLAUDE_SUPPORTED_MEDIA_TYPES,
+        },
+        /* Modelli da non utilizzare
+        {
+          modelId: 'claude-v3.5-sonnet',
+          label: t('model.claude-v3.5-sonnet.label'),
+          description: t('model.claude-v3.5-sonnet.description'),
+          supportMediaType: CLAUDE_SUPPORTED_MEDIA_TYPES,
+        },
+        {
+          modelId: 'claude-v3.5-sonnet-v2',
+          label: t('model.claude-v3.5-sonnet-v2.label'),
+          description: t('model.claude-v3.5-sonnet-v2.description'),
+          supportMediaType: CLAUDE_SUPPORTED_MEDIA_TYPES,
+        },
           {
             modelId: 'claude-v3-haiku',
             label: t('model.claude-v3-haiku.label'),
@@ -87,24 +106,6 @@ const useModel = (botId?: string | null, activeModels?: ActiveModels) => {
             modelId: 'claude-v3.5-haiku',
             label: t('model.claude-v3.5-haiku.label'),
             description: t('model.claude-v3.5-haiku.description'),
-            supportMediaType: CLAUDE_SUPPORTED_MEDIA_TYPES,
-          },
-          {
-            modelId: 'claude-v3-sonnet',
-            label: t('model.claude-v3-sonnet.label'),
-            description: t('model.claude-v3-sonnet.description'),
-            supportMediaType: CLAUDE_SUPPORTED_MEDIA_TYPES,
-          },
-          {
-            modelId: 'claude-v3.5-sonnet',
-            label: t('model.claude-v3.5-sonnet.label'),
-            description: t('model.claude-v3.5-sonnet.description'),
-            supportMediaType: CLAUDE_SUPPORTED_MEDIA_TYPES,
-          },
-          {
-            modelId: 'claude-v3.5-sonnet-v2',
-            label: t('model.claude-v3.5-sonnet-v2.label'),
-            description: t('model.claude-v3.5-sonnet-v2.description'),
             supportMediaType: CLAUDE_SUPPORTED_MEDIA_TYPES,
           },
           {
@@ -132,6 +133,7 @@ const useModel = (botId?: string | null, activeModels?: ActiveModels) => {
             description: t('model.amazon-nova-micro.description'),
             supportMediaType: [],
           },
+          */
         ]
       : [
           {
