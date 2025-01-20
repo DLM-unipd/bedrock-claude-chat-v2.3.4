@@ -20,7 +20,7 @@ const translation = {
         recentlyUsedBots: 'Bot condivisi utilizzati di recente',
         knowledge: 'Informazioni',
         url: 'URL',
-        sitemap: 'URL della mappa del sito',
+        sitemap: 'Mappa del sito',
         file: 'File',
         loadingBot: 'Caricamento...',
         normalChat: 'Chat',
